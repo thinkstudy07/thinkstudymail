@@ -72,7 +72,7 @@ try {
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'No Reply | Leads from INTRC Website Form';
 
-    echo "$fname";
+    // echo "$fname";
     $mail->Body    = "
         <h1>Test Mail</h1>
         ";
