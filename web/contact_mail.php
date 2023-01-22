@@ -26,19 +26,17 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = 2;                      //Enable verbose debug output
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                       //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.zoho.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'contactus@thinkstudy.co.in';                     //SMTP username
     $mail->Password   = 'Study@100$';                               //SMTP password
     $mail->SMTPSecure = 'ssl';            //Enable implicit TLS encryption
-    $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-    $mail->SMTPSecure = false;
-    $mail->SMTPAutoTLS = false;
+    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     //Recipients
     $mail->setFrom('contactus@thinkstudy.co.in', 'From Website');
-    $mail->addAddress('contactus@thinkstudy.co.in', 'No Reply');     //Add a recipient
+    $mail->addAddress('web.field@thinkstudy.co.in', 'No Reply');     //Add a recipient
     // $mail->addAddress('webfield@intrc.us');               //Name is optional
     // $mail->addReplyTo('webfield@intrc.us', 'Information');
     // $mail->addCC('cc@example.com');
