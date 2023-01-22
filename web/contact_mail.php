@@ -37,7 +37,7 @@ try {
 
     //Recipients
     $mail->setFrom('contactus@thinkstudy.co.in', 'From Website');
-    $mail->addAddress('athinkstudy@gmail.com', 'No Reply');     //Add a recipient
+    $mail->addAddress('contactus@thinkstudy.co.in', 'No Reply');     //Add a recipient
     // $mail->addAddress('webfield@intrc.us');               //Name is optional
     // $mail->addReplyTo('webfield@intrc.us', 'Information');
     // $mail->addCC('cc@example.com');
